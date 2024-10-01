@@ -6,6 +6,7 @@ import cv2
 import numpy as np
 import types
 from numpy import random
+from random import choice
 
 
 def intersect(box_a, box_b):
@@ -236,8 +237,8 @@ class RandomSampleCrop(object):
     def __call__(self, image, boxes=None, labels=None):
         height, width, _ = image.shape
         while True:
-            # randomly choose a mode
-            mode = random.choice(self.sample_options)
+            # randomly choose a mode (using stdlib random.choice, not np.random.choice)
+            mode = choice(self.sample_options)
             if mode is None:
                 return image, boxes, labels
 

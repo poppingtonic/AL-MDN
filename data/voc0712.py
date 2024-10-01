@@ -28,6 +28,7 @@ VOC_CLASSES = (  # always index 0
 
 # note: if you used our download scripts, this should be right
 VOC_ROOT = osp.join(HOME, "data/VOCdevkit/")
+VOC_ROOT = "/media/mu/data/ml/VOC/VOCtrainval_06-Nov-2007/VOCdevkit/"
 
 
 class VOCAnnotationTransform(object):

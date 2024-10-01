@@ -64,6 +64,9 @@ Visualization
 python demo.py --trained_model <trained weight path>
 ```
 
+Debugging
+---------
+- To debug this library interactively using `pdb.set_trace()`, set `--num_workers=0` when running the training code, otherwise the pdb line gets skipped due to the multithreading.
 
 Citation
 --------
